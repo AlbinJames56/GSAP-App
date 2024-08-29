@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    overflow-x: hidden;
+    background: rgb(252,225,95);
+background: linear-gradient(75deg, rgba(252,225,95,0.2655113070618873) 0%, rgba(255,141,254,0.06102951434480042) 47%, rgba(255,237,11,0.32993707737001055) 100%);
+}
+ 
+@layer components{
+    .grid_{
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    }
+    .box{
+        @apply  text-white font-bold text-2xl p-6 overflow-hidden;
+    }
+    .num{
+        @apply text-9xl opacity-45 translate-x-10 translate-y-7;
+    }
+    .btn{
+        @apply bg-navy_blue font-bold text-white p-4 w-40;
+    }
+    .menu{
+        @apply flex flex-col justify-between gap-2 text-sm
+    }
+    .menu p{
+        @apply font-bold mb-4
+    }
+    .menu li{
+        @apply text-sm text-gray-600
+    }
+     .bg-5{
+        transform-origin: top;
+     }
+}
